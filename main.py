@@ -19,8 +19,8 @@ if __name__ == '__main__':
     #     print("Full help")
 
     match sys.argv[1:]:
-        case ["--help"]:
-            print("HELP")
+        case [("--help" | "--usage") as arg]:
+            print(f"HELP (actually {arg})")
         case ["--help", "--all"]:
             print("HELP ALL")
         case ["--help", command]:
